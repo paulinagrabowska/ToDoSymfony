@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -10,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
  * @package App\Controller
  */
 
-class HelloWorldController {
+class HelloWorldController extends AbstractController {
 
 //    /**
 //     * Index action
@@ -26,20 +27,35 @@ class HelloWorldController {
 //        return new Response('Hello '.$name.'!');
 //    }
 
+//    /**
+//     * Index action
+//     * @param string $name User input
+//     * @return Response
+//     * @Route(
+//     *     "/{name}",
+//     *     defaults={"name" : "World"},
+//     *     requirements={"name" : "[a-zA-Z]+"},
+//     * )
+//     */
+//
+//    public function index(string $name): Response {
+//        return new Response('Hello '.$name.'!');
+//    }
+
     /**
      * Index action
      * @param string $name User input
      * @return Response
      * @Route(
-     *     "/{name}",
+     *     "/hello/{name}",
      *     defaults={"name" : "World"},
      *     requirements={"name" : "[a-zA-Z]+"},
      * )
      */
 
-    public function index(string $name): Response {
-        return new Response('Hello '.$name.'!');
+    public function index(string $name): Response
+    {
+        return $this->render('hello-world/index.html.twig', [ 'name' => $name]);
     }
-
 
 }
