@@ -5,10 +5,10 @@
 {% endblock %}
 
 {% block body %}
-    <h1>{{ 'title.task_list'|trans }}</h1>
+    <h1 class="text-center ">{{ 'title.task_list'|trans }}</h1>
     {% if pagination is defined and pagination|length %}
 
-        <div class="navigation text-center">
+        <div class="navigation text-center ">
             {{ knp_pagination_render(pagination) }}
         </div>
 
@@ -27,12 +27,12 @@
             {% for task in pagination %}
                 <tr>
                     <td>{{ task.id }}</td>
-                    <td>{{ task.createdAt|date('Y/m/d') }}</td>
-                    <td>{{ task.updatedAt|date('Y/m/d')}}</td>
+                    <td>{{ task.createdAt|localizeddate }}</td>
+                    <td>{{ task.updatedAt|localizeddate }}</td>
                     <td>{{ task.title }}</td>
                     <td>{{ task.category.title }}</td>
                     <td>
-                        <a href="{{ url('task_view', {id: task.id}) }}" title="{{ 'label.view'|trans }}" type="button" class="btn btn-secondary">
+                        <a href="{{ url('task_view', {id: task.id}) }}" title="{{ 'label.view'|trans }}" class="btn btn-secondary">
                             {{ 'label.view'|trans }}
                         </a>
                     </td>

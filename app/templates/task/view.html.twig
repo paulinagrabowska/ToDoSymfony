@@ -27,14 +27,14 @@
             <a href="#" class="list-group-item list-group-item-action disabled">{{  task.id }}
             </a>
             <a href="#" class="list-group-item list-group-item-action">{{ 'label.created_at'|trans }}</a>
-            <a href="#" class="list-group-item list-group-item-action disabled">{{ task.createdAt|date('Y/m/d') }}</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">{{task.createdAt|localizeddate }}</a>
             <a href="#" class="list-group-item list-group-item-action">{{ 'label.updated_at'|trans }}</a>
-            <a href="#" class="list-group-item list-group-item-action disabled">{{ task.updatedAt|date('Y/m/d')}}</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">{{ task.updatedAt|localizeddate }}</a>
             <a href="#" class="list-group-item list-group-item-action">{{ 'label.category'|trans }}</a>
             <a href="#" class="list-group-item list-group-item-action disabled">{{ task.category.title }}</a>
             <a href="#" class="list-group-item list-group-item-action">{{ 'label.title'|trans  }}</a>
             <a href="#" class="list-group-item list-group-item-action disabled">{{ task.title  }}</a>
-            <a href="{{ url ('task_index')}}" title="task_index" type="button" class="btn btn-primary">Powrót</a>
+            <a href="{{ url ('task_index')}}" title="task_index"  class="btn btn-primary">Powrót</a>
         </div>
     {% else %}
 
