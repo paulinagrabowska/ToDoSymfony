@@ -22,6 +22,26 @@
                 <source>label.view</source>
                 <target>Zobacz</target>
             </trans-unit>
+            <trans-unit id="title.task_view">
+                <source>title.task_view</source>
+                <target>Task #%id%</target>
+            </trans-unit>
+            <trans-unit id="title.task_list">
+                <source>title.task_list</source>
+                <target>Lista zadań</target>
+            </trans-unit>
+            <trans-unit id="label.created_at">
+                <source>label.created_at</source>
+                <target>Godzina stworzenia</target>
+            </trans-unit>
+            <trans-unit id="label.updated_at">
+                <source>label.updated_at</source>
+                <target>Godzina apdejtu</target>
+            </trans-unit>
+            <trans-unit id="label.category">
+                <source>label.category</source>
+                <target>Kategoria</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

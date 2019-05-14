@@ -4,23 +4,43 @@
         <body>
             <trans-unit id="label.id">
                 <source>label.id</source>
-                <target>Ajdi</target>
+                <target>Id</target>
             </trans-unit>
             <trans-unit id="label.title">
                 <source>label.title</source>
-                <target>Tytuł</target>
+                <target>Title</target>
             </trans-unit>
             <trans-unit id="label.tags">
                 <source>label.tags</source>
-                <target>Tagi</target>
+                <target>Tags</target>
             </trans-unit>
             <trans-unit id="label.actions">
                 <source>label.actions</source>
-                <target>Akcje</target>
+                <target>Actions</target>
             </trans-unit>
             <trans-unit id="label.view">
                 <source>label.view</source>
-                <target>Zobacz</target>
+                <target>View</target>
+            </trans-unit>
+            <trans-unit id="title.task_view">
+                <source>title.task_view</source>
+                <target>Task #%id%</target>
+            </trans-unit>
+            <trans-unit id="title.task_list">
+                <source>title.task_list</source>
+                <target>To do list</target>
+            </trans-unit>
+            <trans-unit id="label.created_at">
+                <source>label.created_at</source>
+                <target>Created at</target>
+            </trans-unit>
+            <trans-unit id="label.updated_at">
+                <source>label.updated_at</source>
+                <target>Updated at</target>
+            </trans-unit>
+            <trans-unit id="label.category">
+                <source>label.category</source>
+                <target>Category</target>
             </trans-unit>
         </body>
     </file>

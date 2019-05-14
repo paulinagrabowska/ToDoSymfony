@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.task_list'|trans({'%id%': task.id|default('')}) }}
+{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">{{ 'title.task_list'|trans({'%id%': task.id|default('')}) }}</h1>
+    {% if task is defined and task|length %}
+{#        <dl class="dl-horizontal">#}
+{#            <dt>{{ 'label.id'|trans }}</dt>#}
+{#            <dd>{{ task.id }}</dd>#}
+{#            <dt>{{ 'label.created_at'|trans }}</dt>#}
+{#            <dd>{{ task.createdAt|date('Y/m/d') }}</dd>#}
+{#            <dt>{{ 'label.updated_at'|trans }}</dt>#}
+{#            <dd>{{ task.updatedAt|date('Y/m/d')}}</dd>#}
+{#            <dt>{{ 'label.category'|trans }}</dt>#}
+{#            <dd>{{  task.category.title }}</dd>#}
+{#            <dt>{{ 'label.title'|trans }}</dt>#}
+{#            <dd>{{  task.title }}</dd>#}
+{#        </dl>#}
+
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active">
+                {{ 'label.id'|trans }}
+            </a>
+            <a href="#" class="list-group-item list-group-item-action disabled">{{  task.id }}
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">{{ 'label.created_at'|trans }}</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">{{ task.createdAt|date('Y/m/d') }}</a>
+            <a href="#" class="list-group-item list-group-item-action">{{ 'label.updated_at'|trans }}</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">{{ task.updatedAt|date('Y/m/d')}}</a>
+            <a href="#" class="list-group-item list-group-item-action">{{ 'label.category'|trans }}</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">{{ task.category.title }}</a>
+            <a href="#" class="list-group-item list-group-item-action">{{ 'label.title'|trans  }}</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">{{ task.title  }}</a>
+            <a href="{{ url ('task_index')}}" title="task_index" type="button" class="btn btn-primary">Powrót</a>
+        </div>
+    {% else %}
+
+    {% endif %}
+    <p>
+
+    </p>
+{% endblock %}
+
