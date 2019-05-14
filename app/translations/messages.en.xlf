@@ -42,6 +42,27 @@
                 <source>label.category</source>
                 <target>Category</target>
             </trans-unit>
+            <trans-unit id="label.new">
+                <source>label.new</source>
+                <target>Add new</target>
+            </trans-unit>
+            <trans-unit id="label.edit">
+                <source>label.edit</source>
+                <target>Edit</target>
+            </trans-unit>
+            <trans-unit id="label.delete">
+                <source>label.delete</source>
+                <target>Delete</target>
+            </trans-unit>
+            <trans-unit id="title.category_list">
+                <source>title.category_list</source>
+                <target>List of categories</target>
+            </trans-unit>
+            <trans-unit id="label.category_list">
+                <source>label.category_list</source>
+                <target>List of categories</target>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>

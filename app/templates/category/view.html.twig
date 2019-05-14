@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.category_list'|trans({'%id%': category.id|default('')}) }}
+{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">{{ 'title.category_list'|trans({'%id%': category.id|default('')}) }}</h1>
+    {% if category is defined and category|length %}
+        {#        <dl class="dl-horizontal">#}
+        {#            <dt>{{ 'label.id'|trans }}</dt>#}
+        {#            <dd>{{ category.id }}</dd>#}
+        {#            <dt>{{ 'label.created_at'|trans }}</dt>#}
+        {#            <dd>{{ category.createdAt|date('Y/m/d') }}</dd>#}
+        {#            <dt>{{ 'label.updated_at'|trans }}</dt>#}
+        {#            <dd>{{ category.updatedAt|date('Y/m/d')}}</dd>#}
+        {#            <dt>{{ 'label.category'|trans }}</dt>#}
+        {#            <dd>{{  category.category.title }}</dd>#}
+        {#            <dt>{{ 'label.title'|trans }}</dt>#}
+        {#            <dd>{{  category.title }}</dd>#}
+        {#        </dl>#}
+
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active">
+                {{ 'label.id'|trans }}
+            </a>
+            <a href="#" class="list-group-item list-group-item-action disabled">{{  category.id }}
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">{{ 'label.created_at'|trans }}</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">{{category.createdAt|localizeddate }}</a>
+            <a href="#" class="list-group-item list-group-item-action">{{ 'label.updated_at'|trans }}</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">{{ category.updatedAt|localizeddate }}</a>
+            <a href="#" class="list-group-item list-group-item-action">{{ 'label.category'|trans }}</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">{{ category.title }}</a>
+            <a href="#" class="list-group-item list-group-item-action">{{ 'label.title'|trans  }}</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">{{ category.title  }}</a>
+            <a href="{{ url ('category_index')}}" title="category_index"  class="btn btn-primary">Powrót</a>
+        </div>
+    {% else %}
+
+    {% endif %}
+    <p>
+
+    </p>
+{% endblock %}
+
