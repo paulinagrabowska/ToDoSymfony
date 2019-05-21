@@ -33,9 +33,10 @@
         </table>
 
     {% else %}
-        <p>
-            Empty list.
-        </p>
+        {% include 'default/_single_flash_message.html.twig' with {
+            type: 'warning',
+            message: 'message.empty_list'|trans
+        } %}
     {% endif %}
 
 {% endblock  %}
